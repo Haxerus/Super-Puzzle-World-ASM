@@ -1,4 +1,4 @@
-print "Only sprites can pass through"
+print "You need coins coins to walk on"
 db $42
 JMP MarioBelow : JMP MarioAbove : JMP MarioSide : JMP return : JMP return : JMP return : JMP return
 JMP Corners : JMP HeadInside : JMP BodyInside
@@ -9,7 +9,9 @@ MarioSide:
 Corners:
 HeadInside:
 BodyInside:
-    JMP Solid
+    LDA $0DD4
+    CMP $0DBF
+	BMI Solid
     RTL
 Solid:
     LDY #$01

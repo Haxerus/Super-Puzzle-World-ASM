@@ -3,7 +3,6 @@
 ;based on mikeyk's code, adapted by Davros.
 
 	!CUSTOM_SPRITE = $85    ;>custom sprite number to generate
-        !DELAY = #$50
 
 db $42
 
@@ -32,8 +31,6 @@ MarioCorner:
 	%move_spawn_into_block()
 	
 	%erase_block()
-        LDA #$01
-        STA $0EF6
 Pull_x:
 	PLX                     ;pull x
 Return:
