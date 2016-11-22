@@ -1,4 +1,4 @@
-print "Only only solid when switch is off"
+print "Only solid when switch is off"
 db $42
 JMP MarioBelow : JMP MarioAbove : JMP MarioSide : JMP SpriteV : JMP SpriteH : JMP return : JMP FireBall
 JMP Corners : JMP HeadInside : JMP BodyInside

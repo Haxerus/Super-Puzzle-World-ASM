@@ -5,11 +5,39 @@ INIT:
     JSL Clear_Coins
     JSL Reset_Lives
     RTL
+    
+; Called every frame
+
+MAIN:
+    LDA $0DD4
+    CMP $0DBF
+    BMI TriggerSet_00
+    RTL
+    
+; Sets flag for custom trigger 0
+
+TriggerSet_00:
+    REP #$20
+    LDA $7FC0FC
+    ORA #$0001
+    STA $7FC0FC
+    SEP #$20
+    RTL
+    
+; Resets animation flag
+
+TriggerReset_00:
+    REP #$20
+    LDA $7FC0FC
+    AND #$FFFE
+    STA $7FC0FC
+    SEP #$20
+    RTL
 
 ; Sets coins required to pass through a gate
  
 Coin_Gate_Count:
-    LDA #$00 ; number of coins required to pass through a coin gate, in hex
+    LDA #$06 ; number of coins required to pass through a coin gate, in hex
     STA $0DD4
     RTL
 
