@@ -1,2 +1,15 @@
 210 on_solid.asm
 211 off_solid.asm
+
+250 lives.asm
+251 one_way_down.asm
+252 one_way_left.asm
+253 one_way_right.asm
+254 one_way_up.asm
+255 sprite_only.asm
+256 coin_gate_solid.asm
+257 coin_gate_air.asm
+258:100 donutblk.asm
+259 powshatter.asm
+25A:25 powerup_gate.asm
+25B:25 mario_only.asm
